@@ -6,59 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buoi1</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="./buoi1.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/buoi1.css">
+
 </head>
 
-<div>
+<body>
+    <div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 999;"></div>
     <div class="container">
         <!------------------------------------------------------------------------------>
         <div class="head">
             <div class="left-head">
-                <img src="./img/Frame 57.png" alt="" class="logo">
+                <img src="../img/Frame 57.png" alt="" class="logo">
             </div>
             <div class="right-head">
                 <ul class="head-menu">
-                    <li>CATALOGUE</li>
-                    <li>FASHION</li>
-                    <li>FAVOURITE</li>
-                    <li>LIFESTYLE</li>
-                    <li>SIGN UP</li>
+                    <li><a href="">CATALOGUE</a></li>
+                    <li><a href="">FASHION </a></li>
+                    <li><a href="">FAVOURITE</a></li>
+                    <li><a href="">LIFESTYLE</a></li>
+                    <li id = "dang_ki"><a href="../index/form_dang_ki.html">SIGN UP </a></li>
+
                 </ul>
             </div>
         </div>
         <!------------------------------------------------------------------------------>
 
         <div class="slider">
+            
             <div class="left-slider">
                 <div class="img">
-                    <img src="./img/anh_chu.png" alt="">
+                    <img src="../img/anh_chu.png" alt="">
                 </div>
                 <div class="p-detailes">
                     <p>Live for Influential and Innovative fashion!</p>
                 </div>
-                <button>Shop Now</button>
+                <a href="shop.html"><button>Shop Now</button></a>
             </div>
+
             <div class="right-slider">
                 <div class="img">
-                    <img src="./img/anh-slider.png" alt="">
+                    <img src="../img/anh-slider.png" alt="">
                 </div>
+            </div>
+
+            <div class="slider-track" id="sliderTrack">
+                <div class="slide" style="background-image: url('../img/Rectangle\ 2\ \(2\).png');"></div>
+                <div class="slide" style="background-image: url('../img/anh_1_nguoi.png');"></div>
+                <div class="slide" style="background-image: url('../img/anh_2_nguoi.png');"></div>
+                <div class="slide" style="background-image: url('https://top10tphcm.com/wp-content/uploads/2023/02/hinh-anh-doremon-cute-ngau-dep-nhat-2-1.jpg');"></div>
+                <div class="slide" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5ad7sE_gzZhp-6WTWHjskJalsddckyuL2iw&s');"></div>
             </div>
         </div>
 
+
+       
+    
         <!------------------------------------------------------------------------------>
 
         <div class="brand-section">
             <div class="brand-section-small">
                 <div class="brand-section-menu">
-                    <img src="./img/anh_chu1-removebg-preview.png" alt="">
-                    <img src="./img/anh_chu2-removebg-preview.png" alt="">
-                    <img src="./img/anh_chu3-removebg-preview.png" alt="">
-                    <img src="./img/anh_chu4-removebg-preview.png" alt="">
-                    <img src="./img/anh_chu5-removebg-preview.png" alt="">
-                    <img src="./img/anh_chu6-removebg-preview.png" alt="">
+                    <img src="../img/anh_chu1-removebg-preview.png" alt="">
+                    <img src="../img/anh_chu2-removebg-preview.png" alt="">
+                    <img src="../img/anh_chu3-removebg-preview.png" alt="">
+                    <img src="../img/anh_chu4-removebg-preview.png" alt="">
+                    <img src="../img/anh_chu5-removebg-preview.png" alt="">
+                    <img src="../img/anh_chu6-removebg-preview.png" alt="">
                 </div>
             </div>
+            
         </div>
 
         <!------------------------------------------------------------------------------>
@@ -70,7 +88,7 @@
             <div class="contain-product">
                 <div class="product">
                     <div class="img-product">
-                        <img src="./img/san_pham1.png" alt="">
+                       <figure><img src="../img/san_pham1.png" alt=""></figure> 
                     </div>
                     <div class="details">
                         <div class="left-details">
@@ -84,7 +102,7 @@
                 </div>
                 <div class="product">
                     <div class="img-product">
-                        <img src="./img/san_pham2.png" alt="">
+                       <figure><img src="../img/san_pham2.png" alt=""></figure> 
                     </div>
                     <div class="details">
                         <div class="left-details">
@@ -98,7 +116,7 @@
                 </div>
                 <div class="product">
                     <div class="img-product">
-                        <img src="./img/san_pham3.png" alt="">
+                       <figure><img src="../img/san_pham3.png" alt=""></figure> 
                     </div>
                     <div class="details">
                         <div class="left-details">
@@ -116,7 +134,7 @@
 
         <div class="silder-bar">
             <div class="left-slider-bar">
-                <img src="./img/anh_slider-bar-removebg-preview.png" alt="">
+                <img src="../img/anh_slider-bar-removebg-preview.png" alt="">
             </div>
             <div class="right-slider-bar">
                 <p class="title1"><b>PAYDAY</b></p>
@@ -125,9 +143,37 @@
                 <p class="date1"><b>1 June - 10 June 2021</b></p>
                 <p class="date2"> *Terms & Conditions apply</p>
                 <button>Show Now</button>
-
+            </div>
+           
+        </div>
+        <!-- <div class="slider-bar">
+            <div class="left-slider">
+                <div class="img">
+                    <img src="../img/anh_slider-bar-removebg-preview.png" alt="">
+                </div>
+                <a href="shop.html"><button>Shop Now</button></a>
+            </div>
+    
+            <div class="right-slider">
+                <div class="content">
+                    <p class="title1"><b>PAYDAY</b></p>
+                    <p class="title2"><b>SALENOW</b></p>
+                    <p class="details">Spend minimal $100 get 30% off voucher code for your next purchase</p>
+                    <p class="date1"><b>1 June - 10 June 2021</b></p>
+                    <p class="date2">*Terms & Conditions apply</p>
+                    <button>Show Now</button>
+                </div>
+            </div>
+    
+            <div class="slider-track1" id="sliderTrack1">
+                <div class="slide1" style="background-image: url('./img/Rectangle 2 (2).png');"></div>
+                <div class="slide1" style="background-image: url('./img/anh_1_nguoi.png');"></div>
+                <div class="slide1" style="background-image: url('./img/anh_2_nguoi.png');"></div>
+                <div class="slide1" style="background-image: url('https://top10tphcm.com/wp-content/uploads/2023/02/hinh-anh-doremon-cute-ngau-dep-nhat-2-1.jpg');"></div>
+                <div class="slide1" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5ad7sE_gzZhp-6WTWHjskJalsddckyuL2iw&s');"></div>
             </div>
         </div>
+     -->
 
         <!------------------------------------------------------------------------------>
 
@@ -137,7 +183,7 @@
             <div class="favourite-products">
                 <div class="favourite-item">
                     <div class="img-products-favourite">
-                        <img src="./img/anh_2_nguoi.png" alt="">
+                        <img src="../img/anh_2_nguoi.png" alt="">
                     </div>
                     <div class="details-new-products">
                         <div class="left-new-products">
@@ -153,7 +199,7 @@
                 <!------------------------------------------------------------------------------>
                 <div class="favourite-item">
                     <div class="img-products-favourite">
-                        <img src="./img/anh_1_nguoi.png" alt="">
+                        <img src="../img/anh_1_nguoi.png" alt="">
                     </div>
                     <div class="details-new-products">
                         <div class="left-new-products" <p><b>Trending instagram</b></p>
@@ -179,8 +225,8 @@
                         Get 30% off for first transaction using
                         Rondovision mobile app for now.
                     </p>
-                    <img src="./img/app_store.png" alt="">
-                    <img src="./img/gg-play.png" alt="">
+                    <img src="../img/app_store.png" alt="">
+                    <img src="../img/gg-play.png" alt="">
                 </div>
             </div>
             <div class="right-introduts">
@@ -194,7 +240,7 @@
                                             <i class="fa-solid fa-bars"></i>
                                         </div>
                                         <div class="avata-phone">
-                                            <img src="./img/avata.png" alt="">
+                                            <img src="../img/avata.png" alt="">
                                         </div>
                                     </div>
                                     <h1><b>Match your style</b></h1>
@@ -211,28 +257,28 @@
                                     </div>
                                     <div class="product-phone">
                                         <div class="products-item-phone">
-                                            <img src="./img/sanphamphone1.png" alt="">
+                                            <img src="../img/sanphamphone1.png" alt="">
                                             <div class="details-phone">
                                                 <p><b>Polkadot Red Dress</b></p>
                                                 <p>Rs. 1,499.00</p>
                                             </div>
                                         </div>
                                         <div class="products-item-phone">
-                                            <img src="./img/sanphamphone2.png" alt="">
+                                            <img src="../img/sanphamphone2.png" alt="">
                                             <div class="details-phone">
                                                 <p><b>Polkadot Red Dress</b></p>
                                                 <p>Rs. 1,499.00</p>
                                             </div>
                                         </div>
                                         <div class="products-item-phone">
-                                            <img src="./img/sanphamphone3.png" alt="">
+                                            <img src="../img/sanphamphone3.png" alt="">
                                             <!-- <div class="details-phone">
                                 <p><b>Polkadot Red Dress</b></p>
                                 <p>Rs. 1,499.00</p>
                               </div> -->
                                         </div>
                                         <div class="products-item-phone">
-                                            <img src="./img/sanphamphone4.png" alt="">
+                                            <img src="../img/sanphamphone4.png" alt="">
                                             <!-- <div class="details-phone">
                                 <p><b>Polkadot Red Dress</b></p>
                                 <p>Rs. 1,499.00</p>

@@ -14,8 +14,12 @@ body {
 .container{
     width: 1920px;
 }
+a{
+    text-decoration: none;
+}
 /***********************START-HEAD*********************************************/
 .head{
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     margin-right: 50px;
@@ -54,25 +58,47 @@ body {
 
 /***********************END-HEAD*********************************************/
 /**************************START-SLIDE**************************************/
-.slider{
+
+.slider {
     width: 1720px;
     height: 852px;
     border-radius: 59px;
-    background-image: url('./img/Rectangle\ 2\ \(2\).png');
-    display: flex;
+    overflow: hidden;
+    position: relative;
     margin: 56px 50px 0px 50px;
+
+}
+.slider .p-details{
+    color: black;
+}
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease; /*chạy từ trái sang phải*/
 }
 
-.left-slider{
-    /* width: 680px; */
-    margin-top: 68px;
-    margin-left: 74px;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    text-align: left;
+.slide {
+    min-width: 100%;
+    height: 852px;
+    background-size: cover;
+    background-position: center;
 }
-.left-slider img{
+
+.left-slider, .right-slider {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    color: white;
 }
+
+.left-slider {
+    left: 10%;
+}
+
+.right-slider {
+    right: 10%;
+}
+
 
 .left-slider .p-detailes {
     font-size: 32px;
@@ -97,8 +123,6 @@ body {
 .right-slider{
     margin-top: 68px;
     margin-left: 40px;
-    /* width: 871px; */
-    /* height: 784px; */
 }
 
 /*************************END-SLIDER*************************/
@@ -173,6 +197,9 @@ body {
 .contain-product .product img {
     height: 704px;
     margin-bottom: 28px;
+    display: block;
+    width: 100%;
+    cursor: pointer;
 }
 
 .contain-product .product .details {
@@ -201,7 +228,20 @@ body {
     justify-content: center;
     align-items: center;
 }
+/******************/
+figure{
+    overflow: hidden;
+    margin: 0 10px;
+}
+.product{
+    transform:scale(1) ;
+    transition: 0.3s ease-in-out;
+}
+.product:hover{
+    transform:scale(1.1) ;
+}
 
+/*****************/
 
 /************************START-silder-bar***************************/
 .silder-bar {
@@ -210,7 +250,7 @@ body {
     margin-top: 109px;
     display: grid;
     grid-template-columns: 992px 932px;
-    background-image: url('./img/background.png');
+    background-image: url('../img/background.png');
 }
 
 .left-slider-bar img{
@@ -311,6 +351,19 @@ body {
     display: flex;
     align-items: center;
 }
+
+/*******************/
+.favourite-item{
+    transform:scale(1) ;
+    transition: 0.3s ease-in-out;
+    margin: 0 10px;
+
+}
+.favourite-item:hover{
+    transform:scale(1.1) ;
+
+}
+/*********************/
 
 /***************************END-product-favourite*************/
 
@@ -541,7 +594,7 @@ body {
 
 .promo-section{
     width: 100%;
-    background-image: url('./img/background.png');
+    background-image: url('../img/background.png');
     height: 623px;
     margin-top: 102px;
     display: flex;
@@ -710,3 +763,163 @@ footer{
 
 
 /************************************************************/
+.slider-bar {
+    width: 1720px;
+    height: 852px;
+    border-radius: 59px;
+    overflow: hidden;
+    position: relative;
+    margin: 56px 50px 0px 50px;
+}
+
+.slider-track1 {
+    display: flex;
+    transition: transform 0.5s ease; 
+}
+
+.slide1 {
+    min-width: 100%;
+    height: 852px;
+    background-size: cover;
+    background-position: center;
+}
+
+.left-slider, .right-slider {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    color: white;
+}
+
+.left-slider {
+    left: 10%;
+}
+
+.right-slider {
+    right: 10%;
+    margin-top: 68px;
+    margin-left: 40px;
+}
+
+.left-slider .p-detailes {
+    font-size: 32px;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.left-slider button {
+    font-size: 30px;
+    border: none;
+    background-color: #000;
+    color: #ffffff;
+    width: 221px;
+    height: 82px;
+    border-radius: 10px;
+}
+
+.left-slider button:hover {
+    background-color: #E6C744;
+    color: #000;
+}
+
+.p-details {
+    color: black; 
+}
+
+/****************************/
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Overlay to disable clicks outside the form and dim the background */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 99; /* Ensure it’s above other content but below the form */
+}
+
+/* Centered form styling */
+#container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Adjust width as needed */
+    max-width: 400px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 100; /* Above overlay */
+    width: 500px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 15px;
+}
+
+
+
+h2 {
+    text-align: center;
+    font-size: 36px;
+}
+
+.input {
+    margin-left: 20px;
+    display: grid;
+    grid-template-columns: 0.2fr 0.7fr;
+    padding: 10px;
+}
+
+label {
+    padding: 10px;
+}
+
+input {
+    border: none;
+    background-color: #F2F3F5;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input:hover {
+    background-color: #4CAF50;
+}
+
+input:hover::placeholder {
+    color: white;
+}
+
+input:focus {
+    outline: none;
+}
+
+.button {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+
+}
+
+button {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
