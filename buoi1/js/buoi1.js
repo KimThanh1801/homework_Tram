@@ -1,5 +1,4 @@
 
-
 const imagesCount = 5; 
 const sliderTrack = document.getElementById('sliderTrack');
 let currentIndex = 0;
